@@ -1,0 +1,6 @@
+# ignore all log files
+*.log
+# ignore all chache files created
+Abstractions/__pycache__
+Implementation/__pycache__
+Models/__pycache__
