@@ -16,7 +16,7 @@ class ProductModel:
         if product_name in self.product_db.keys():
             return self.product_db[product_name]
         else:
-            return f"{product_name} not found."
+            return None
 
     def all_products(self):
         # return all the products available in the dictionary 

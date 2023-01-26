@@ -9,7 +9,6 @@ class VendorSessionModel:
         # Adding the username in class variable created above.
 
         VendorSessionModel.vendor_session_db[username] = True
-        print(f"{username} logged in successfully")
         return True
 
     # performing the logout operation for the given username
