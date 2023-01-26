@@ -18,9 +18,9 @@ class VendorImplementation(Vendor):
             return False
 
 
-    def logout(self, username):
-        if self.vendor_session.check_login(username):
-            if self.vendor_session.logout(username):
-                print(f"User {username} logged out successfully.")
+    def logout(self, user_name):
+        if self.vendor_session.check_login(user_name):
+            if self.vendor_session.logout(user_name):
+                print(f"User {user_name} logged out successfully.")
         else:
-            print(f"{username} need to login first")
+            print(f"{user_name} need to login first")

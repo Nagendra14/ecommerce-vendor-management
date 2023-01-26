@@ -3,6 +3,7 @@ class VendorSessionModel:
     vendor_session_db = dict()
 
     def __init__(self):
+        # there are no neccessary attributes
         pass
 
     def login(self, username):
