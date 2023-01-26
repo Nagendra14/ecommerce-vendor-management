@@ -4,6 +4,6 @@ class Vendor:
         """This method will be used to login an existing Vendor."""
         pass
 
-    def logout(self):
+    def logout(self, username):
         """This method will be used to logout an existing Vendor."""
         pass
