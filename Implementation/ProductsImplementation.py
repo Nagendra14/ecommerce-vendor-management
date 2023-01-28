@@ -10,21 +10,19 @@ class ProductsImplementation(Products):
         self.vendor_session = VendorSessionModel()
         self._username = username
 
-    # def add_product(self, product_name, product_type, available_quantity, unit_price):
-    #     # check if the vendor is logged in, then add the product and return True else Return False
-    #     if self.vendor_session.check_login(self._username):
-    #         return self.product_model.add_product(product_name=product_name, product_type=product_type, available_quantity=available_quantity, unit_price=unit_price)
-    #     else:
-    #         return False
-
-
-    def add_product(self, *args):
+    def add_product(self, product_name, product_type, available_quantity, unit_price):
         # check if the vendor is logged in, then add the product and return True else Return False
         if self.vendor_session.check_login(self._username):
-            return self.product_model.add_product(*args)
+            return self.product_model.add_product(product_name=product_name, product_type=product_type, available_quantity=available_quantity, unit_price=unit_price)
         else:
             return False
 
+    # def add_product(self, *args):
+    #     # check if the vendor is logged in, then add the product and return True else Return False
+    #     if self.vendor_session.check_login(self._username):
+    #         return self.product_model.add_product(*args)
+    #     else:
+    #         return False
             
     def search_product_by_name(self, product_name):
         # Search if the product is available in the dictionary if the vendor is authorized to access else return False
