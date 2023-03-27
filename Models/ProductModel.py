@@ -1,10 +1,10 @@
 class ProductModel:
 
     def __init__(self):
-        self.product_db = dict()
+        self.__product_db = dict()
 
     def add_product(self, product_name, product_type, available_quantity, unit_price):
-        self.product_db[product_name] = {"product_name": product_name, 
+        self.__product_db[product_name] = {"product_name": product_name, 
                                          "product_type": product_type, 
                                          "available_quantity": available_quantity, 
                                          "unit_price": unit_price
@@ -24,11 +24,11 @@ class ProductModel:
 
     def search_product(self, product_name):
         # Search the passed product_name in the dictionary and return the value
-        if product_name in self.product_db.keys():
-            return self.product_db[product_name]
+        if product_name in self.__product_db.keys():
+            return self.__product_db[product_name]
         else:
             return None
 
     def all_products(self):
         # return all the products available in the dictionary 
-        return self.product_db
+        return self.__product_db
